@@ -3,9 +3,12 @@
 
 <script>
 export default {
-    name: 'HelloWorld',
+    name: 'TeamMemberCard',
     props: {
-        msg: String
+        member: {
+            type: Object,
+            required: true
+        }
     }
 }
 </script>

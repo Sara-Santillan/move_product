@@ -12,6 +12,10 @@ br
 button Start free trial
 </template>
 
+<style scope lang="stylus">
+h1
+    font-weight: 700
+</style>
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'

@@ -1,7 +1,7 @@
 <template lang="pug">
-.about
+section.team-member-view
     h1 This is the team view
-    p {{ members }}
+    TeamMemberList(v-bind:members="members")
 </template>
 
 <script>

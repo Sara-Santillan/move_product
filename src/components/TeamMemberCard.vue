@@ -1,4 +1,8 @@
 <template lang="pug">
+ul
+    li {{ member.name.first }}
+    li {{ member.name.last }}
+br
 </template>
 
 <script>

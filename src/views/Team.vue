@@ -1,7 +1,7 @@
 <template lang="pug">
 section.team-member-view
     h1 This is the team view
-    TeamMemberList(v-bind:members="members")
+    TeamMemberList(v-bind:team_members="team_members")
 </template>
 
 <script>
@@ -16,7 +16,7 @@ export default {
     // pass it into data, to execute in the setup hook:
     data () {
         return {
-            members: []
+            team_members: []
         }
     },
     methods: {
@@ -25,7 +25,7 @@ export default {
             await fetch(url)
                 .then(response => response.json())
                 .then(data => {
-                    this.members = data.results
+                    this.team_members = data.results
                 })
         }
     },

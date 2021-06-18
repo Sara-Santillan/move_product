@@ -1,7 +1,7 @@
 <template lang="pug">
-ul
-    li {{ member.name.first }}
-    li {{ member.name.last }}
+ul.team-member-card
+    li {{ team_member.name.first }}
+    li {{ team_member.name.last }}
 br
 </template>
 
@@ -9,7 +9,7 @@ br
 export default {
     name: 'TeamMemberCard',
     props: {
-        member: {
+        team_member: {
             type: Object,
             required: true
         }
@@ -19,4 +19,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
+
 </style>

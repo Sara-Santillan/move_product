@@ -10,7 +10,7 @@ const routes = [
     {
         path: '/team',
         name: 'Team',
-        component: () => import('../views/Team.vue')
+        component: () => import('../views/Team.vue') // for lazy loading
     },
     {
         path: '/product',

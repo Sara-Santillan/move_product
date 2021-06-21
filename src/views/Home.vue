@@ -1,4 +1,5 @@
 <template lang="pug">
+
 section.valueprop
     p Design.
     p Develop.
@@ -17,9 +18,11 @@ ul.menu
             br
             | apps
 button Start free trial
+
 </template>
 
 <style scoped lang="stylus">
+
 h1
     font-weight: 700
     font-size: 2.4rem
@@ -52,9 +55,11 @@ button
 button:hover
     cursor: pointer
     background-color: #303030
+
 </style>
 
 <script>
+
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
 
@@ -63,4 +68,5 @@ export default {
     components: {
     }
 }
+
 </script>

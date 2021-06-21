@@ -1,4 +1,6 @@
 <template lang="pug">
-.about
-    h1 This is the product view
+
+h2 { the product view }
+p Vue route test successful
+
 </template>

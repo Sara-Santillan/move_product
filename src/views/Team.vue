@@ -1,7 +1,9 @@
 <template lang="pug">
+
 section.team-member-view
     p Get to know your future team
     TeamMemberList(v-bind:team_members="team_members")
+
 </template>
 
 <style scoped lang="stylus">
@@ -9,9 +11,11 @@ section.team-member-view
 section.team-member-view
     padding-top: 2rem
     border-top: 4px dashed #c3c3c3
+
 </style>
 
 <script>
+
 import TeamMemberList from '@/components/TeamMemberList.vue'
 
 export default {
@@ -40,4 +44,5 @@ export default {
         this.fetchMembers()
     }
 }
+
 </script>

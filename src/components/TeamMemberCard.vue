@@ -1,4 +1,5 @@
 <template lang="pug">
+
 ul.team-member-card
     li
         img(:src="team_member.picture.medium")
@@ -10,10 +11,11 @@ ul.team-member-card
         p {{ team_member.location.country }}
     li
         button Connect now
-br
+
 </template>
 
 <script>
+
 export default {
     name: 'TeamMemberCard',
     props: {
@@ -23,10 +25,12 @@ export default {
         }
     }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
+
 ul.team-member-card
     width: 16rem
     display: flex
@@ -41,4 +45,5 @@ ul.team-member-card
         font-size: 0.8rem
     button
         margin: 2rem 0
+
 </style>

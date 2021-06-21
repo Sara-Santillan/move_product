@@ -1,8 +1,8 @@
 ![move_product homepage](screenshots/move_product_homepage.png "move_product homepage")
-* Sample product homepage using `vue-router`
+*ABOVE: Sample product homepage using `vue-router`*
 
 ![move_product team view](screenshots/move_product_team.png "move_product team view")
-* Sample `View` with `fetch` for API pulling and props in child components
+*ABOVE: Sample `View` with `fetch` for API pulling and props in child components*
 
 # move_product
 

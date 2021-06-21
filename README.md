@@ -1,4 +1,9 @@
 ![move_product homepage](screenshots/move_product_homepage.png "move_product homepage")
+* Sample product homepage using `vue-router`
+
+![move_product team view](screenshots/move_product_team.png "move_product team view")
+* Sample `View` with `fetch` for API pulling and props in child components
+
 # move_product
 
 `move_product` is a sample `vue 3` project using Composition API, `fetch` and `vue-router` to illustrate a full-featured, typical Vue project set up. It highlights the components system and common operations on components:

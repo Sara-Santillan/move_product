@@ -1,6 +1,5 @@
 <template lang="pug">
 section
-    h2 TeamMemberList
     ul.team-member-list
         li.team-member(v-for="(team_member, index) in team_members" :key="index" :team-member="team_member")
             TeamMemberCard(v-bind:team_member="team_member")
@@ -26,6 +25,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
 .team-member-list
-    width: 9rem
-    margin: auto
+    margin: 3.4rem auto
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-evenly
 </style>

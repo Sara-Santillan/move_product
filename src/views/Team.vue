@@ -1,8 +1,15 @@
 <template lang="pug">
 section.team-member-view
-    h1 This is the team view
+    p Get to know your future team
     TeamMemberList(v-bind:team_members="team_members")
 </template>
+
+<style scoped lang="stylus">
+
+section.team-member-view
+    padding-top: 2rem
+    border-top: 4px dashed #c3c3c3
+</style>
 
 <script>
 import TeamMemberList from '@/components/TeamMemberList.vue'

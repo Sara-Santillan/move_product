@@ -1,6 +1,4 @@
 <template lang="pug">
-header
-    h1 We move_product
 section.valueprop
     p Design.
     p Develop.
@@ -21,7 +19,7 @@ ul.menu
 button Start free trial
 </template>
 
-<style scope lang="stylus">
+<style scoped lang="stylus">
 h1
     font-weight: 700
     font-size: 2.4rem
@@ -50,6 +48,7 @@ button
     border-radius: 0.4rem
     background-color: #000000
     color: #ffffff
+    font-family: "Red Hat Text", sans-serif
 button:hover
     cursor: pointer
     background-color: #303030

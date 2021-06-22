@@ -2,13 +2,13 @@
 
 ul.team-member-card
     li
-        img(:src="team_member.picture.medium")
+        img(:src="teamMember.picture.medium")
     li
-        h3 {{ team_member.name.first }} {{ team_member.name.last }}
+        h3 {{ teamMember.name.first }} {{ teamMember.name.last }}
     li
-        a(:href="'mailto:' + team_member.email") {{ team_member.email }}
+        a(:href="'mailto:' + teamMember.email") {{ teamMember.email }}
     li
-        p {{ team_member.location.country }}
+        p {{ teamMember.location.country }}
     li
         button Connect now
 
@@ -19,7 +19,7 @@ ul.team-member-card
 export default {
     name: 'TeamMemberCard',
     props: {
-        team_member: {
+        teamMember: {
             type: Object,
             required: true
         }

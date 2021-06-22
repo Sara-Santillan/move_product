@@ -2,8 +2,8 @@
 
 section
     ul.team-member-list
-        li.team-member(v-for="(team_member, index) in team_members" :key="index" :team-member="team_member")
-            TeamMemberCard(v-bind:team_member="team_member")
+        li.team-member(v-for="(teamMember, index) in teamMembers" :key="index" :teamMember="teamMember")
+            TeamMemberCard(v-bind:teamMember="teamMember")
 
 </template>
 
@@ -14,8 +14,8 @@ import TeamMemberCard from './TeamMemberCard.vue'
 export default {
     name: 'TeamMemberList',
     props: {
-        team_members: {
-            type: Array,
+        teamMembers: {
+            type: Object,
             required: true
         }
     },

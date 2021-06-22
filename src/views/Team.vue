@@ -2,29 +2,33 @@
 
 section.team-member-view
     p Get to know your future team
-    ul.team-member-list
-        li.team-member(v-for="(teamMember, index) in teamMembers" :key="index")
-            p {{ teamMember.title }}
-    //TeamMemberList(v-bind:teamMembers="teamMembers.value")
+    TeamMemberList(v-bind:teamMembers="teamMembers")
 
 </template>
 
 <script>
 
-// import TeamMemberList from '@/components/TeamMemberList.vue'
+import TeamMemberList from '@/components/TeamMemberList.vue'
 import { ref } from 'vue'
 
 export default {
     name: 'Team',
     components: {
-        // TeamMemberList
+        TeamMemberList
     },
     setup () {
-        // const teamMembers = ref([])
-        const teamMembers = ref([
-            { title: 'Task 1', completed: true },
-            { title: 'Task 2', completed: false }
-        ])
+        const teamMembers = ref([])
+
+        async function fetchMembers () {
+            const url = 'https://randomuser.me/api/?results=4'
+            await fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    teamMembers.value = data.results
+                })
+        }
+
+        fetchMembers()
 
         return {
             teamMembers

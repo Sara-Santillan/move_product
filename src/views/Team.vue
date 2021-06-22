@@ -2,9 +2,37 @@
 
 section.team-member-view
     p Get to know your future team
-    TeamMemberList(v-bind:team_members="team_members")
+    ul.team-member-list
+        li.team-member(v-for="(teamMember, index) in teamMembers" :key="index")
+            p {{ teamMember.title }}
+    //TeamMemberList(v-bind:teamMembers="teamMembers.value")
 
 </template>
+
+<script>
+
+// import TeamMemberList from '@/components/TeamMemberList.vue'
+import { ref } from 'vue'
+
+export default {
+    name: 'Team',
+    components: {
+        // TeamMemberList
+    },
+    setup () {
+        // const teamMembers = ref([])
+        const teamMembers = ref([
+            { title: 'Task 1', completed: true },
+            { title: 'Task 2', completed: false }
+        ])
+
+        return {
+            teamMembers
+        }
+    }
+}
+
+</script>
 
 <style scoped lang="stylus">
 
@@ -13,36 +41,3 @@ section.team-member-view
     border-top: 4px dashed #c3c3c3
 
 </style>
-
-<script>
-
-import TeamMemberList from '@/components/TeamMemberList.vue'
-
-export default {
-    name: 'Team',
-    components: {
-        TeamMemberList
-    },
-    // we will add methods to FETCH data from an API &
-    // pass it into data, to execute in the setup hook:
-    data () {
-        return {
-            team_members: []
-        }
-    },
-    methods: {
-        async fetchMembers () {
-            const url = 'https://randomuser.me/api/?results=4'
-            await fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    this.team_members = data.results
-                })
-        }
-    },
-    mounted () {
-        this.fetchMembers()
-    }
-}
-
-</script>

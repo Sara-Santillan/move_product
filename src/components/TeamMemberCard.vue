@@ -28,7 +28,6 @@ export default {
 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
 
 ul.team-member-card
@@ -40,7 +39,7 @@ ul.team-member-card
     img
         border-radius: 50%
         margin-top: 2rem
-    p,a
+    p, a
         padding-top: 1rem
         font-size: 0.8rem
     button
